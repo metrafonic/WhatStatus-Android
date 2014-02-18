@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">WhatStatus Checker</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">WhatStatus</string>
+    <string name="loadingString">Loading...</string>
+    <string name="lableSite">Site - what.cd</string>
+    <string name="LableTracker">Tracker - tracker.what.cd</string>
+    <string name="lableIRC">IRC - irc.what-network.net</string>
+    <string name="buttonRefresh">Manual Refresh</string>
+    <string name="appVersion">v1.0</string>
+    <color name="Grey">#D8D8D8</color>
+    <color name="Online">#00cc00</color>
+    <string name="questionmark">\?</string>
+    <string name="changelog">A mobile version of the WhatStatus.info website. Application created by Mathias Hedberg.\n\nv2.0 - Switched to the JSON API for a faster more reliable app and for easier upgrades to the app (thanks dewey!). Changed the UI to match the site. \n\nv1.1 - Experimental widget added. Updates every 10 minutes. Green is online and red is offline. White means waiting for next refresh.\n\nv1.0 - Initial release.\n\nThis application is unofficial and is not affiliated with What.cd.</string>
+
+</resources>
