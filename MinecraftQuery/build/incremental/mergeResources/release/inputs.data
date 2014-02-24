@@ -1,0 +1,19 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1370960522000 1067 4bb77043923d8cb2776994b5574254f8b568f5ee /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/xml/preferences.xml
+1370790091000 3760 9d45e7de00dac30e9738dc369dece2835bf9677e /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/drawable-mdpi/ic_launcher.png
+1370790116000 24780 6c2954bdacb8129ac00edfd084b98daf226518e3 /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/drawable-xxhdpi/ic_launcher.png
+1370790091000 381 b129b276e01126de5b3b753572ac67cbfc19454c /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/values-v14/styles.xml
+1370790091000 290 d8b58506b16ee87718df275b465d79cf852ed0b5 /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/layout/activity_main.xml
+1370790091000 244 045ff451db7cd8e61285502b8c9bbf7405f2078d /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/menu/main.xml
+1370961397000 10077 6e18f50536041524e7a006fad015c108ffbf1985 /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/layout/fragment_main_dummy.xml
+1370790091000 254 25b6404e44acb50c82590049639d4fb5fefbac8e /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/values-sw720dp-land/dimens.xml
+1370800676000 358 ebba145b5725dc7674c34625b6952c2312ddf2e6 /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/values/strings.xml
+1370895049000 374 cb57afda869913a1084f62866806807671d1bef2 /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/values/array.xml
+1370790091000 211 4e1904afba59d31e5cd6133f6a4c360fa9a5913f /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/values/dimens.xml
+1370790091000 324 aa1f5f1723de9aee2669dc44a26fbc0ce776d35f /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/values-v11/styles.xml
+1370790116000 7783 03172612ec7d8d2cc6295a185410c3e6501771aa /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/drawable-hdpi/ic_launcher.png
+1370790091000 680 c76f4caaa7a8dfe9727fa93001b3aee3b22d6716 /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/values/styles.xml
+1370790116000 12356 75154d4f6e93c8832a74d3c27c8cf0d44672ea3e /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/drawable-xhdpi/ic_launcher.png
+1370790091000 181 84de2797380184d8b39af6f829afb092fb956173 /Users/mathias/AndroidStudioProjects/MinecraftQueryProject/MinecraftQuery/src/main/res/values-sw600dp/dimens.xml

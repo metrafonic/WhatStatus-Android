@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" >Native Minecraft Query
+    </string>
+    <string name="action_settings" >Settings
+    </string>
+    <string name="title_section1" >Server 1
+    </string>
+    <string name="title_section2" >Server 2
+    </string>
+    <string name="title_section3" >Server 3
+    </string><string name="refreshButton">Refresh Query</string>
+
+</resources>

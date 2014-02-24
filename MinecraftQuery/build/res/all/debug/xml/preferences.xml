@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+            android:summary="Server 1 IP and Port info"
+            android:title="Server 1 info" >
+        <EditTextPreference
+                android:key="server1"
+                android:summary="Server IP Address"
+                android:title="Hostname/IP" />
+        <EditTextPreference
+                android:key="port1"
+                android:summary="Query Port"
+                android:title="Port" />
+    </PreferenceCategory>
+    <PreferenceCategory
+            android:summary="Server 2 IP and Port info"
+            android:title="Server 2 info" >
+        <EditTextPreference
+                android:key="server2"
+                android:summary="Server IP Address"
+                android:title="Hostname/IP" />
+        <EditTextPreference
+                android:key="port2"
+                android:summary="Query Port"
+                android:title="Port" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

@@ -1,1 +1,1 @@
-include ':whatstatus.checker'
+include ':MinecraftQuery'
