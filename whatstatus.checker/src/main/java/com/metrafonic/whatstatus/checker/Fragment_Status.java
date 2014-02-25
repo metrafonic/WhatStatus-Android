@@ -50,16 +50,16 @@ public class Fragment_Status extends Fragment {
                 try{
                     jsonResponse = new JSONObject(response);
                     switch (Integer.parseInt(jsonResponse.getString("site"))){
-                        case 0: textSite.setText("Down");
-                        case 1: textSite.setText("Up");
+                        case 0: textSite.setText("Down");break;
+                        case 1: textSite.setText("Up");break;
                     }
                     switch (Integer.parseInt(jsonResponse.getString("tracker"))){
-                        case 0: textTracker.setText("Down");
-                        case 1: textTracker.setText("Up");
+                        case 0: textTracker.setText("Down");break;
+                        case 1: textTracker.setText("Up");break;
                     }
                     switch (Integer.parseInt(jsonResponse.getString("irc"))){
-                        case 0: textIRC.setText("Down");
-                        case 1: textIRC.setText("Up");
+                        case 0: textIRC.setText("Down");break;
+                        case 1: textIRC.setText("Up");break;
                     }
                 }catch (JSONException e){
                     e.printStackTrace();
