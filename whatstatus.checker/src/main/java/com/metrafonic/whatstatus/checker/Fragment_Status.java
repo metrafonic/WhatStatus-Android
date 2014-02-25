@@ -1,5 +1,6 @@
 package com.metrafonic.whatstatus.checker;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -38,9 +39,9 @@ public class Fragment_Status extends Fragment {
         final TextView textSite = (TextView) rootView.findViewById(R.id.textViewSite);
         final TextView textTracker = (TextView) rootView.findViewById(R.id.textViewTracker);
         final TextView textIRC = (TextView) rootView.findViewById(R.id.textViewIRC);
-        ImageView imageSite = (ImageView) rootView.findViewById(R.id.imageViewSite);
-        ImageView imageTracker = (ImageView) rootView.findViewById(R.id.imageViewTracker);
-        ImageView imageIRC = (ImageView) rootView.findViewById(R.id.imageViewIRC);
+        final ImageView imageSite = (ImageView) rootView.findViewById(R.id.imageViewSite);
+        final ImageView imageTracker = (ImageView) rootView.findViewById(R.id.imageViewTracker);
+        final ImageView imageIRC = (ImageView) rootView.findViewById(R.id.imageViewIRC);
         final AsyncHttpClient client = new AsyncHttpClient();
 
         client.get("https://whatstatus.info/api/status", new AsyncHttpResponseHandler(){
@@ -50,16 +51,16 @@ public class Fragment_Status extends Fragment {
                 try{
                     jsonResponse = new JSONObject(response);
                     switch (Integer.parseInt(jsonResponse.getString("site"))){
-                        case 0: textSite.setText("Down");break;
-                        case 1: textSite.setText("Up");break;
+                        case 0: textSite.setText("Down");imageSite.setImageResource(R.drawable.down);break;
+                        case 1: textSite.setText("Up");imageSite.setImageResource(R.drawable.up);break;
                     }
                     switch (Integer.parseInt(jsonResponse.getString("tracker"))){
-                        case 0: textTracker.setText("Down");break;
-                        case 1: textTracker.setText("Up");break;
+                        case 0: textTracker.setText("Down");imageTracker.setImageResource(R.drawable.down);break;
+                        case 1: textTracker.setText("Up");imageTracker.setImageResource(R.drawable.up);break;
                     }
                     switch (Integer.parseInt(jsonResponse.getString("irc"))){
-                        case 0: textIRC.setText("Down");break;
-                        case 1: textIRC.setText("Up");break;
+                        case 0: textIRC.setText("Down");imageIRC.setImageResource(R.drawable.down);break;
+                        case 1: textIRC.setText("Up");imageIRC.setImageResource(R.drawable.up);break;
                     }
                 }catch (JSONException e){
                     e.printStackTrace();
