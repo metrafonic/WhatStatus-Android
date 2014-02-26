@@ -64,7 +64,7 @@ public class Fragment_Feed extends Fragment {
 
             public void onSuccess(String response) {
      /*--------- DidReceiveData ---------*/
-                Log.e("", "JSON FILE "+" response " + response);
+
                 JSONArray jsonResponse = null;
                 try{
                     jsonResponse = new JSONArray(response);
@@ -98,7 +98,7 @@ public class Fragment_Feed extends Fragment {
                     Log.e("", "token_type " + jsonObject.getString("token_type") + " access_token " + jsonObject.getString("access_token"));
                     client.addHeader("Authorization", jsonObject.getString("token_type") + " " + jsonObject.getString("access_token"));
                     client.get(url, asyncHttpResponseHandler);
-                    Toast.makeText(getActivity(), responce, Toast.LENGTH_SHORT).show();
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

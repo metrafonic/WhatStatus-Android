@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -42,11 +43,13 @@ public class Fragment_Status extends Fragment {
         final ImageView imageSite = (ImageView) rootView.findViewById(R.id.imageViewSite);
         final ImageView imageTracker = (ImageView) rootView.findViewById(R.id.imageViewTracker);
         final ImageView imageIRC = (ImageView) rootView.findViewById(R.id.imageViewIRC);
+        final ProgressBar progressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
         final AsyncHttpClient client = new AsyncHttpClient();
 
         client.get("https://whatstatus.info/api/status", new AsyncHttpResponseHandler(){
             @Override
             public void onSuccess(String response) {
+                progressBar.setVisibility(View.INVISIBLE);
                 JSONObject jsonResponse = null;
                 try{
                     jsonResponse = new JSONObject(response);
@@ -65,6 +68,9 @@ public class Fragment_Status extends Fragment {
                 }catch (JSONException e){
                     e.printStackTrace();
                 }
+            }
+            public void onFailed(){
+                progressBar.setVisibility(View.INVISIBLE);
             }
         });
     }

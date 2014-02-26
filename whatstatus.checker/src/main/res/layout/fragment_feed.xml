@@ -11,7 +11,8 @@
         android:text="What.CD Status:"
         android:id="@+id/textView"
         android:background="#2e2e2e"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:paddingLeft="10dp" />
 
     <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
