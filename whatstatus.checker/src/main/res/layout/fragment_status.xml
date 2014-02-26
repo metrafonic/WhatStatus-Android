@@ -39,26 +39,27 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
                     android:id="@+id/imageViewSite"
                     android:layout_weight="0"
                     android:paddingRight="9dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Site - what.cd"
                     android:id="@+id/textView"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:id="@+id/textViewSite"
-                    android:gravity="right" />
+                    android:gravity="center_vertical|right" />
             </TableRow>
 
             <TableRow
@@ -68,26 +69,27 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
                     android:id="@+id/imageViewTracker"
                     android:layout_weight="0"
                     android:paddingRight="9dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Tracker - tracker.what.cd"
                     android:id="@+id/textView3"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:id="@+id/textViewTracker"
-                    android:gravity="right" />
+                    android:gravity="center_vertical|right" />
             </TableRow>
 
             <TableRow
@@ -97,33 +99,43 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
                     android:id="@+id/imageViewIRC"
                     android:layout_weight="0"
                     android:paddingRight="9dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="IRC - irc.what-network.net"
                     android:id="@+id/textView5"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:id="@+id/textViewIRC"
-                    android:gravity="right"
+                    android:gravity="center_vertical|right"
                     android:layout_weight="1" />
             </TableRow>
         </TableLayout>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="More Stats"
+            android:id="@+id/buttonMoreStats"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:visibility="gone" />
+
         <ProgressBar
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/progressBar" />
 
         <TextView

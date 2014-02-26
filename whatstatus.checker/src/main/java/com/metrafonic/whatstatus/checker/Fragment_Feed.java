@@ -33,6 +33,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
 
 import impl.javame.com.twitterapime.parser.JSONOrgArray;
 
@@ -68,10 +74,28 @@ public class Fragment_Feed extends Fragment {
                 JSONArray jsonResponse = null;
                 try{
                     jsonResponse = new JSONArray(response);
+                    linearTwitter.removeAllViews();
                     for (int i = 0; i < jsonResponse.length(); i++) {
                         View cell = inflater.inflate(R.layout.cell_twitter, container, false);
                         final TextView twitterText = (TextView) cell.findViewById(R.id.tweetFeed);
-                        twitterText.append(jsonResponse.getJSONObject(i).getString("created_at") + "\n" + jsonResponse.getJSONObject(i).getString("text"));
+                        final TextView twitterHours = (TextView) cell.findViewById(R.id.tweetHours);
+                        final String TWITTER="EEE MMM dd HH:mm:ss ZZZZZ yyyy";
+
+                        SimpleDateFormat dateFormatGmt = new SimpleDateFormat("EEE MMM dd HH:mm:ss ZZZZZ yyyy");
+                        dateFormatGmt.setTimeZone(TimeZone.getTimeZone("CST"));
+
+
+                        String date = jsonResponse.getJSONObject(i).getString("created_at");
+
+                        try {
+                            long milliseconds = getTwitterDate(date, TWITTER).getTime() - getTwitterDate(dateFormatGmt.format(new Date()), TWITTER).getTime();
+                            long hours = ((milliseconds*-1 / (1000*60*60)));
+                            twitterHours.setText(hours + " hours ago");
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                        twitterText.append(jsonResponse.getJSONObject(i).getString("text"));
+
                         linearTwitter.addView(cell);
                     }
                 }catch (JSONException e){
@@ -79,6 +103,8 @@ public class Fragment_Feed extends Fragment {
                 }
             };
         };
+
+
 
 /*
  * OAuth Starts Here
@@ -110,5 +136,12 @@ public class Fragment_Feed extends Fragment {
             };
 
         });
+    }
+    public static Date getTwitterDate(String date, String format) throws ParseException {
+
+
+        SimpleDateFormat sf = new SimpleDateFormat(format);
+        sf.setLenient(true);
+        return sf.parse(date);
     }
 }

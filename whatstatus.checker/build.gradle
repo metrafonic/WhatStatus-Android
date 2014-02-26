@@ -20,6 +20,7 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:+'
+    compile 'com.android.support:support-v4:18.0.0'
     compile files('libs/android-async-http-1.4.4.jar')
     compile files('libs/twitter_api_me-1.9.jar')
 }
