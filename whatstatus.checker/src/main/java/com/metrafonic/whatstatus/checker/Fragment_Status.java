@@ -52,8 +52,8 @@ public class Fragment_Status extends Fragment {
         moreStats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent i = new Intent(getActivity(), Fragment_Status.class);
-                //startActivity(i);
+                Intent i = new Intent(getActivity(), Activity_MoreStats.class);
+                startActivity(i);
             }
         });
 

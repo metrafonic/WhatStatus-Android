@@ -20,7 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name="com.metrafonic.whatstatus.checker.Activity_MoreStats"
+            android:label="@string/title_activity_activity__more_stats" >
+        </activity>
     </application>
 
 </manifest>

@@ -21,4 +21,5 @@ android {
 dependencies {
     compile 'com.android.support:appcompat-v7:+'
     compile files('libs/android-async-http-1.4.4.jar')
+    compile files('libs/GraphView-3.1.1.jar')
 }
