@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WhatStatus</string>
+    <string name="title_section1">Status</string>
+    <string name="title_section2">Updates</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity__more_stats">More Stats</string>
+    <string name="title_section3">Section 3</string>
+
+</resources>

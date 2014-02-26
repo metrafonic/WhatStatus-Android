@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=" @whatcdstatus on Twitter"
+        android:id="@+id/textView"
+        android:background="#2e2e2e"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:visibility="visible"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp" />
+
+    <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/linearTwitter">
+
+            <ProgressBar
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading Twitter"
+                android:id="@+id/textView2"
+                android:gravity="center" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

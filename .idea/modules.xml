@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WhatStatusMobile.iml" filepath="$PROJECT_DIR$/WhatStatusMobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/whatstatus.checker/whatstatus.checker.iml" filepath="$PROJECT_DIR$/whatstatus.checker/whatstatus.checker.iml" />
+    </modules>
+  </component>
+</project>
+
