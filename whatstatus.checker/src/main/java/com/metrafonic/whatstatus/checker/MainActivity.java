@@ -92,6 +92,11 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
             startActivity(browserIntent);
             return true;
         }
+        if (id == R.id.action_help) {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.metrafonic.com/whatstatus-android/"));
+            startActivity(browserIntent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

@@ -5,6 +5,7 @@
     <string name="title_section1">Status</string>
     <string name="title_section2">Updates</string>
     <string name="action_website">WhatStatus.info</string>
+    <string name="action_help">Help</string>
     <string name="title_moresection1">Uptime</string>
     <string name="title_moresection2">Updates</string>
     <string name="title_activity_activity__more_stats">More Stats</string>
