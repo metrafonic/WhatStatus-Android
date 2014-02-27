@@ -2,6 +2,8 @@ package com.metrafonic.whatstatus.checker;
 
 import java.util.Locale;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -85,7 +87,9 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_website) {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://whatstatus.info"));
+            startActivity(browserIntent);
             return true;
         }
         return super.onOptionsItemSelected(item);

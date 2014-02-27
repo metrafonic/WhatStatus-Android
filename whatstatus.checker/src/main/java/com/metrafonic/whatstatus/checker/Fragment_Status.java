@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -52,8 +53,9 @@ public class Fragment_Status extends Fragment {
         moreStats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Activity_MoreStats.class);
-                startActivity(i);
+                //Intent i = new Intent(getActivity(), Activity_MoreStats.class);
+                //startActivity(i);
+                Toast.makeText(getActivity(), "Available soon!", Toast.LENGTH_SHORT).show();
             }
         });
 

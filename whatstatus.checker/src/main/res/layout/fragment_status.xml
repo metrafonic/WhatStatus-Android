@@ -142,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="This application and the whatstatus.info website is unofficial and is not affiliated with What.CD."
+            android:text="This application and the whatstatus.info website are unofficial and are not affiliated with What.CD."
             android:id="@+id/textView2"
             android:gravity="center_horizontal" />
     </LinearLayout>
