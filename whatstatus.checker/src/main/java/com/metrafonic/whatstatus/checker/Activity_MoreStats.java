@@ -152,24 +152,24 @@ public class Activity_MoreStats extends ActionBarActivity implements ActionBar.O
             final GraphViewSeries exampleSeries = new GraphViewSeries(new GraphView.GraphViewData[] {});
             final GraphView graphView = new LineGraphView(
                     getActivity() // context
-                    , "Uptime" // heading
+                    , "Uptime in Hours (Last 48 hours)" // heading
             );
             graphView.addSeries(exampleSeries);
-            client.get("http://api.metrafonic.com/", new AsyncHttpResponseHandler(){
+            client.get("https://whatstatus.info/api/2/uptime/tracker", new AsyncHttpResponseHandler(){
                @Override
                 public void onSuccess(String response){
-                   JSONObject jsonResponse = null;
-                   List<String> jsonValues = new ArrayList<String>();
+                   JSONArray jsonResponse = null;
+                   //List<String> jsonValues = new ArrayList<String>();
+                   graphView.setHorizontalLabels(new String[] {"48h ago", "36h","24h", "12h", "now"});
+                   //graphView.setVerticalLabels(new String[] {"0", "1"});
+                   graphView.getGraphViewStyle().setNumVerticalLabels(4);
+                   graphView.getGraphViewStyle().setVerticalLabelsWidth(50);
                    try {
-                       jsonResponse = new JSONObject(response);
-                       for (int i = 0; i < jsonResponse.names().length(); i++){
+                       jsonResponse = new JSONArray(response);
+                       for (int i = 0; i < jsonResponse.length(); i++){
 
-                           jsonValues.add(jsonResponse.names().getString(i));
-                       }
-                       Collections.sort(jsonValues);
-                       for (int i = 0; i<jsonValues.size(); i++){
-                           String x = jsonValues.get(i).substring(8, 12);
-                           GraphView.GraphViewData newData = new GraphView.GraphViewData(/*Float.parseFloat(jsonValues.get(i)*/ Integer.parseInt(x),Integer.parseInt(jsonResponse.getString(jsonValues.get(i))));
+                           //jsonValues.add(jsonResponse.getJSONObject(i).getString("status"));
+                           GraphView.GraphViewData newData = new GraphView.GraphViewData(48-(i*2), Integer.parseInt(jsonResponse.getJSONObject(i).getString("status")));
                            exampleSeries.appendData(newData, false);
                        }
                            /*long numberx = Long.parseLong(jsonResponse.names().get(i).toString());

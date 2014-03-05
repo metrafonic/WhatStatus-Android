@@ -22,7 +22,7 @@
         android:id="@+id/graph1"
         android:minHeight="500dip"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="200dp" >
     </LinearLayout>
 
 </RelativeLayout>
