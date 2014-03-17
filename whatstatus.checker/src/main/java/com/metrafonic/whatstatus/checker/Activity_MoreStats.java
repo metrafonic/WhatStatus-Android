@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -145,6 +146,7 @@ public class Activity_MoreStats extends ActionBarActivity implements ActionBar.O
                 Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.fragment_morestats, container, false);
             final TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+            final ProgressBar progressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
             //textView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
 
             final AsyncHttpClient client = new AsyncHttpClient();
@@ -155,15 +157,17 @@ public class Activity_MoreStats extends ActionBarActivity implements ActionBar.O
                     , "Uptime in Hours (Last 48 hours)" // heading
             );
             graphView.addSeries(exampleSeries);
+            graphView.setHorizontalLabels(new String[] {"48h ago", "36h","24h", "12h", "now"});
+            //graphView.setVerticalLabels(new String[] {"0", "1"});
+            graphView.getGraphViewStyle().setNumVerticalLabels(4);
+            graphView.getGraphViewStyle().setVerticalLabelsWidth(50);
             client.get("https://whatstatus.info/api/2/uptime/tracker", new AsyncHttpResponseHandler(){
                @Override
                 public void onSuccess(String response){
+                   progressBar.setVisibility(View.GONE);
                    JSONArray jsonResponse = null;
                    //List<String> jsonValues = new ArrayList<String>();
-                   graphView.setHorizontalLabels(new String[] {"48h ago", "36h","24h", "12h", "now"});
-                   //graphView.setVerticalLabels(new String[] {"0", "1"});
-                   graphView.getGraphViewStyle().setNumVerticalLabels(4);
-                   graphView.getGraphViewStyle().setVerticalLabelsWidth(50);
+
                    try {
                        jsonResponse = new JSONArray(response);
                        for (int i = 0; i < jsonResponse.length(); i++){
