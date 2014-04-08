@@ -18,7 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:paddingLeft="4dp" />
+            android:paddingLeft="4dp"
+            android:autoLink="web" />
 
         <LinearLayout
             android:orientation="horizontal"
