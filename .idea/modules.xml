@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/WhatStatus-Android.iml" filepath="$PROJECT_DIR$/WhatStatus-Android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WhatStatusMobile.iml" filepath="$PROJECT_DIR$/WhatStatusMobile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/whatstatus.checker/whatstatus.checker.iml" filepath="$PROJECT_DIR$/whatstatus.checker/whatstatus.checker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/whatstatus/whatstatus.iml" filepath="$PROJECT_DIR$/whatstatus/whatstatus.iml" />
     </modules>
   </component>
 </project>
