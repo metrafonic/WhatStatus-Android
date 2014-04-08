@@ -12,9 +12,9 @@ android {
     }
     signingConfigs{
         release {
-            storeFile file("com.metrafonic.jks")
+            storeFile file("MathiasHedbergkeystore")
             storePassword System.getenv("STORE_PASSWORD")
-            keyAlias "whatstatus"
+            keyAlias "whatstatus android app"
             keyPassword System.getenv("KEY_PASSWORD")
         }
     }
