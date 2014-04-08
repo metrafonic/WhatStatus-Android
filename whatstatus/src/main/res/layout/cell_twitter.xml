@@ -17,7 +17,6 @@
             android:id="@+id/tweetFeed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
             android:paddingLeft="4dp"
             android:autoLink="web" />
 
